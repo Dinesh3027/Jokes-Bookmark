@@ -1,0 +1,29 @@
+.container{
+    display: flex;
+    width: 100%;
+    margin: 30px auto 10px;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+
+    .mat-card{
+        width: 80%;
+          
+          .header-image {
+            background-image: url('https://ik.imagekit.io/6wsbihaw9/Laugh/baby_laugh_9q8yUWSLL?ik-sdk-version=javascript-1.4.3&updatedAt=1654726573636');
+            background-size: cover;
+          }
+
+        .mat-form-field{
+            width: 90%;
+        }
+
+        .mat-card-actions{
+          padding: 8px 12px !important;
+        }
+
+        .mat-card-actions-align-end {
+          margin-bottom: 2px !important;
+        }
+    }
+}

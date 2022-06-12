@@ -1,0 +1,23 @@
+<div class="container">
+    <mat-card>
+        <mat-card-header>
+        <div mat-card-avatar class="header-image"></div>
+        <mat-card-title>Joke Lookup</mat-card-title>
+        <mat-card-subtitle>Find or Save a Joke</mat-card-subtitle>
+      </mat-card-header>
+        <mat-card-content>
+            <form>
+                <mat-form-field appearance="outline">
+                    <mat-label>Enter a Joke</mat-label>
+                    <textarea matInput class="search-field" [formControl]="jokeInput" placeholder="Enter a Joke or Find a Joke"></textarea>
+                    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                    <mat-hint>Hint</mat-hint>
+                  </mat-form-field>
+            </form>
+        </mat-card-content>
+        <mat-card-actions align="end">
+            <button mat-raised-button color="primary" class="find-joke" (click)="onFindingARandomJoke()">Find Joke</button>
+            <button mat-raised-button color="accent" class="save-joke" [disabled]="enableButton" (click)="onSaveBtnClick()">Save</button>
+        </mat-card-actions>
+    </mat-card>
+</div>
