@@ -1,0 +1,17 @@
+{
+  "name": "jokes-backend",
+  "version": "1.0.0",
+  "description": "This will just serve the APIs to the Frontend App.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Dinesh Merugumilli",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "express": "^4.18.1",
+    "mongodb": "^4.7.0"
+  }
+}
