@@ -18,7 +18,7 @@ RUN npm run build
 FROM nginx:1.13.12-alpine
 
 # Copy the build output to replace the default nginx contents.
-COPY --from=node /usr/src/app/frontend/dist/frontend /usr/share/nginx/html
+COPY --from=node /usr/src/app/frontend/dist/ /usr/share/nginx/html
 
 
 # Expose port 80

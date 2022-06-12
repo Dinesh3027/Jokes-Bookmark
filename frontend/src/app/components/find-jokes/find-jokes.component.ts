@@ -23,6 +23,9 @@ export class FindJokesComponent implements OnInit {
 
   ngOnInit(): void {
     this.setRandomJokeToTextBox();
+    this.jokeInput.valueChanges.subscribe(it => {
+      this.enableButton = false;
+    });
   }
 
 
@@ -33,9 +36,7 @@ export class FindJokesComponent implements OnInit {
    */
   observeValueChangeOnInput() {
     this.jokeInput.markAsUntouched();
-    this.jokeInput.valueChanges.subscribe(it => {
-      this.enableButton = false;
-    });
+    this.enableButton = true; 
   }
 
   onFindingARandomJoke(){
@@ -79,7 +80,9 @@ export class FindJokesComponent implements OnInit {
       });
       if (it.status === 0) { 
         this.network.isJokeSaved.next(true);
-        this.enableButton = true; }
+        this.enableButton = true; 
+        this.jokeInput.setValue("");
+      }
     });
   }
 

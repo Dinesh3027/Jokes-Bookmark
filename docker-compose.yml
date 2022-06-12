@@ -10,14 +10,14 @@ services:
       - "3000:3000"
     depends_on:
       - mongo
-  # frontend:
-  #   container_name: frontend
-  #   restart: always
-  #   build: ./frontend
-  #   ports:
-  #     - "80:80"
-  #   depends_on:
-  #     - backend
+  frontend:
+    container_name: frontend
+    restart: always
+    build: ./frontend
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
   mongo:
     container_name: "mongo"
     image: mongo
