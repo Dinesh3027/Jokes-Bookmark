@@ -11,6 +11,35 @@
   Frontend Angular App UI implemented using [Angular Material](https://material.angular.io/) UI design principles and its components. For **Unit testing** `Karma` used and for End to End (e2e) `Cypress` used.
   
   
+ ## Backend Node App
+ 
+  Backend Node App serves APIs using [ExpressJS](https://expressjs.com/) and [MongoDB](https://www.mongodb.com/). 
+  
+ > Available APIs are
+   - `api/jokes` 
+     - Get list of Jokes, `GET` request 
+     - `Fetch` query from DB
+   -  `api/joke`
+      - Add a Joke to the DB, `POST` request
+      - `Insert` query from DB
+   -  `api/joke`
+      - Delete one or more Jokes from the DB, `Delete` request
+      - `Delete` query from DB
+        
+ ## Run the Application
+ 
+  Before running this appliction, make sure you have installed the [Docker](https://www.docker.com/) on your system. To run the application, `cd` to your project and run the below command on your terminal `docker-compose up`.
+  
+## Tests
+ 
+ To run the `test` on Frontend Application, `cd` to the project `frontend` folder and then run following command on your terminal:
+   - Unit testing `ng test` 
+   - End to End testing `ng e2e`
+
+
+     
+  
+  
   
  
  
